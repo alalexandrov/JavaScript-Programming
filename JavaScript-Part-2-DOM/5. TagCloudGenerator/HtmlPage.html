@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var tags = ["cms", "javascript", "js", "ASP.NET MVC", ".net", ".net", "css", "css", "css", "wordpress", "xaml", "js", "http", "web", "asp.net", "asp.net MVC", "ASP.NET MVC", "wp", "javascript", "js", "cms", "html", "html", "html", "html", "javascript", "http", "http", "CMS"];
+       
+
+        generateTagCloud(tags, 1, 60);
+
+        function generateTagCloud(tags,minFontSize, maxFontSize) {
+            var WordsWithCounts = wordCount(tags);
+            var counts = getCounts(WordsWithCounts);
+            var fontSizeStep = Math.floor((maxFontSize - minFontSize) / counts.length);
+            var currentFontSize = maxFontSize;
+            for (var i = 0; i < counts.length; i++) {
+                for (var word in WordsWithCounts) {
+                    if (WordsWithCounts[word] == counts[i]) {
+                        var element = document.createElement("div");
+                        element.innerHTML = word.toString();
+                        element.style.fontSize = currentFontSize + "px";
+                        document.body.appendChild(element);                     
+                    }
+                }
+                document.body.appendChild(document.createElement("hr"));
+                currentFontSize -= fontSizeStep;
+            }
+        }
+
+        function wordCount(wordsArr) {
+            var wordCount = {};
+            for (var i = 0; i < wordsArr.length; i++) {
+                var word = wordsArr[i].toLowerCase();
+                if (wordCount[word]) {
+                    wordCount[word]++;
+                }
+                else {
+                    wordCount[word] = 1;
+                }
+            }
+            return wordCount;
+        }
+   
+        function getCounts(wordCounts) {
+            var counts = [];
+            for (var word in wordCounts) {     
+                //Check if the current count is Added
+                var IsAdded = false;
+                var currentCount = wordCounts[word];
+                for (var i = 0; i < counts.length; i++) {
+                    if (counts[i] == currentCount) {
+                        IsAdded = true;
+                        break;
+                    }
+                }
+
+                if (!IsAdded) {
+                    counts.push(currentCount);
+                }
+
+                //Sort counts desc
+                counts.sort(function (a, b) { return b - a });
+            }
+            return counts;
+        }
+
+    </script>
+</body>
+</html>

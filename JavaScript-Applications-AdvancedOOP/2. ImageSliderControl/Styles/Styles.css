@@ -1,0 +1,43 @@
+﻿#wrapper {
+    width: 960px;
+    background-color: gray;
+    padding: 50px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#currentImg {
+    width: 960px;
+    height: 540px;
+    border: 1px solid black;
+}
+
+#imgThumbs {
+    margin-top: 5px;
+    padding: 0px;
+    background-color: red;
+    border: 1px solid black;
+    overflow: auto;
+    white-space: nowrap;
+    width: 960px;
+}
+
+    #imgThumbs li {
+        display: inline-block;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+.selected {
+    border: 2px solid yellow;
+}
+
+#prevImgBtn {
+    margin: 0px;
+    margin-left: 280px;
+    width: 200px;
+}
+
+#nextImgBtn {
+    width: 200px;
+}

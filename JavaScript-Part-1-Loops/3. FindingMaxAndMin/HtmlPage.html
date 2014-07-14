@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="numbers"></label>
+    <input type="text" id="numbers" />
+    <input type="button"  value="FindMax" onclick="FindMax()"/>
+    <input type="button"  value="FindMin" onclick="FindMin()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        var numbers = document.getElementById("numbers").value;
+        var SplitedNumbers = numbers.split(",");
+        var IntNumbers = new Array();
+        for (var i = 0; i < SplitedNumbers.length; i++) {
+            IntNumbers.push(parseInt(SplitedNumbers[i]));
+        }
+
+        function FindMax() {
+            var MaxNumber = Number.MIN_VALUE;
+            for (var i = 0; i < IntNumbers.length; i++) {
+                if (IntNumbers[i] > MaxNumber) {
+                    MaxNumber = IntNumbers[i];
+                }
+            }
+            jsConsole.writeLine("The MAX number is: " + MaxNumber);
+        }
+
+        function FindMin() {           
+            var MinNumber = Number.MAX_VALUE;
+            for (var i = 0; i < IntNumbers.length; i++) {
+                if (MinNumber > IntNumbers[i]) {
+                    MinNumber = IntNumbers[i];
+                }
+            }
+            jsConsole.writeLine("The MIN number is: " + MinNumber);
+        }
+    </script>
+</body>
+</html>

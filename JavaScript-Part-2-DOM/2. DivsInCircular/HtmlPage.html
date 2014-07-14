@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            font-size: 30px;
+            text-align: center;
+            line-height: 45px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+        
+        var elements = document.getElementsByTagName("div");
+        var angle = 0;
+        var step = (2 * Math.PI) / elements.length;
+
+        //Arrange divs in circular
+        for (var i = 0; i < elements.length; i++) {
+            setPosition(elements[i], angle);
+            angle += step;
+        }
+
+        // Make elements move
+        setInterval(function () { moveElements() }, 100);
+
+
+        function moveElements() {
+            angle+=0.05;
+            for (var i = 0; i < elements.length; i++) {             
+                setPosition(elements[i], angle);
+                angle += step;
+            }
+            
+            if (angle == 2 * Math.PI) {
+                angle = 0;
+            }
+        }
+
+        function setPosition(element, angle) {
+            var radius = 200;
+            var x = Math.round(300 + radius * Math.cos(angle));
+            var y = Math.round(300 + radius * Math.sin(angle));
+            element.style.position = "absolute";
+            element.style.left = x + "px";
+            element.style.top = y + "px";
+        }
+
+    </script>
+</body>
+</html>

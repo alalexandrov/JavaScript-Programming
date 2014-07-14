@@ -1,0 +1,27 @@
+﻿ #wrapper {
+            width: 500px;
+            height: 800px;
+            background-color: gray;
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+        h1{
+            margin: 20px;
+        }
+        #taskText{
+            width: 300px;
+            margin-left: 20px;
+        }
+        li{
+            font-size: 20px;
+            font-family:sans-serif;
+            font-weight:bold;
+            color: white;
+            margin: 10px;
+        }
+        button{
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 5px;
+        }

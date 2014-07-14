@@ -1,0 +1,11 @@
+﻿.selected {
+            list-style-type: disc;
+            background-color: skyblue;
+            width: 200px;
+            border: 2px solid blue;
+            font-weight: bold;
+        }
+
+        li {
+            cursor: pointer;
+        }

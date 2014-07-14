@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    
+    <label for="number">Number :</label>
+    <input type="text" id="number"/>
+    <input type="button" value="Check" onclick="CheckNumber()"  />
+
+    <script>
+        function CheckNumber() {
+            var answer = document.getElementById("number").value % 2 == 0;
+            if (answer) {
+                jsConsole.writeLine("The number" + " " + document.getElementById("number").value + " " + "is Even !");
+            }
+            else {
+                jsConsole.writeLine("The number" + " " + document.getElementById("number").value + " " + "is Odd !");
+            }
+        }
+    </script>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+
+</body>
+</html>

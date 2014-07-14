@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="button" value="TEST" onclick="Test()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        
+        function HowManyTimesOccur(number, array) {
+            var count = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == number) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function Test() {
+            var num = 1;
+            var arr = [1, 1, 1, 2, 2, 3, 4, 7, 1];
+            if (HowManyTimesOccur(num, arr) == 4) {
+                jsConsole.writeLine("Test 1: passed");
+            }
+            else {
+                jsConsole.writeLine("Test 1: failed");
+            }
+
+            var num2 = 2;
+            if (HowManyTimesOccur(num2, arr) == 2) {
+                jsConsole.writeLine("Test 2: passed");
+            }
+            else {
+                jsConsole.writeLine("Test 2: failed");
+            }
+
+            var num3 = 7;
+            if (HowManyTimesOccur(num3, arr) == 1) {
+                jsConsole.writeLine("Test 3: passed");
+            }
+            else {
+                jsConsole.writeLine("Test 3: failed");
+            }
+
+            var arr2 = [1, 1, 1, 1, 1, 1, 1];
+            if (HowManyTimesOccur(num, arr2) == 7) {
+                jsConsole.writeLine("Test 4: passed");
+            }
+            else {
+                jsConsole.writeLine("Test 4: failed");
+            }
+    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\3. TableGenerator\bin\_3.TableGenerator.dll.config
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\3. TableGenerator\bin\_3.TableGenerator.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\3. TableGenerator\bin\_3.TableGenerator.pdb
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\3. TableGenerator\obj\Debug\3. TableGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\3. TableGenerator\obj\Debug\_3.TableGenerator.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\3. TableGenerator\obj\Debug\_3.TableGenerator.pdb

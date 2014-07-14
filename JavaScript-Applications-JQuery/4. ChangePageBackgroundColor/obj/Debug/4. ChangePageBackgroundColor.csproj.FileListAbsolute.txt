@@ -1,0 +1,6 @@
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\4. ChangePageBackgroundColor\bin\_4.ChangePageBackgroundColor.dll.config
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\4. ChangePageBackgroundColor\bin\_4.ChangePageBackgroundColor.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\4. ChangePageBackgroundColor\bin\_4.ChangePageBackgroundColor.pdb
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\4. ChangePageBackgroundColor\obj\Debug\4. ChangePageBackgroundColor.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\4. ChangePageBackgroundColor\obj\Debug\_4.ChangePageBackgroundColor.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\4. ChangePageBackgroundColor\obj\Debug\_4.ChangePageBackgroundColor.pdb

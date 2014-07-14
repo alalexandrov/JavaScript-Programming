@@ -1,0 +1,48 @@
+﻿#container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        #scoreBoardContainer {
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            margin: auto 500px;
+            color: white;
+            border-radius: 10px;
+        }
+
+            #scoreBoardContainer h1 {
+                
+                text-align: center;
+            }
+
+            #scoreBoardContainer #scoreBoard {
+  
+            }
+
+            #scoreBoardContainer #startGameBtn {
+                width: 150px;
+                height: 30px;
+                margin-top: 30px;
+                margin-left: 73px;
+            }
+
+        #scoreBoard li {
+            color: white;
+            margin: 10px;
+        }
+
+
+
+        #getPlayerNameForm {
+            width: 200px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            margin: auto 500px;
+            text-align: center;
+            display: none;
+            border-radius: 10px;
+        }

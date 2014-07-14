@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        var text1 = "text text. texting TeXt TEXT word text.";
+
+        jsConsole.writeLine(WordCounter(text1, "text"));
+   
+        function WordCounter(text, word, caseSensitive) {
+            caseSensitive = caseSensitive || false;
+
+            if (!caseSensitive) {
+                text = text.toLowerCase();
+                word = word.toLowerCase();
+            }
+            
+            var count = 0;
+            var index = text.indexOf(word);
+            while (index != -1) {
+                if ((text[index - 1] == " " ||
+                    text[index - 1] == undefined) &&
+                    (text[index + word.length] == " " ||
+                    text[index + word.length] == "," ||
+                    text[index + word.length] == ".")) {
+
+                    count++;
+                }
+                index = text.indexOf(word, index + 1);
+            }
+            return count;
+        }
+
+    </script>
+</body>
+</html>

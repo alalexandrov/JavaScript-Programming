@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="aSide">A:</label>
+    <input type="text" id="aSide" />
+    <br />
+    <label for="bSide">B:</label>
+    <input type="text" id="bSide" />
+    <br />
+    <label for="height">Height:</label>
+    <input type="text" id="height" />
+    <input type="button" value="Calculate" onclick="CalculateArea()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+
+    <script>
+        function CalculateArea() {
+            var aSide = parseFloat(document.getElementById("aSide").value);
+            var bSide = parseFloat(document.getElementById("bSide").value);
+            var Height = parseFloat(document.getElementById("height").value);
+            var area = ((aSide + bSide) * Height) / 2;
+            jsConsole.writeLine("The Trapezoid area is: " + area);  
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="A">A:</label>
+    <input type="text" id="A"/>
+    <br />
+    <label for="B">B:</label>
+    <input type="text" id="B"/>
+    <input type="button" onclick="CheckValues()" value="Check"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+
+    <script>
+        function CheckValues() {
+            var A = parseFloat(document.getElementById("A").value);
+            var B = parseFloat(document.getElementById("B").value);
+            if (A > B) {
+                var TEMP;
+                TEMP = A;
+                A = B;
+                B = TEMP;
+            }
+            jsConsole.writeLine("A = " + A);
+            jsConsole.writeLine("B = " + B);
+            
+        }
+    </script>
+</body>
+</html>

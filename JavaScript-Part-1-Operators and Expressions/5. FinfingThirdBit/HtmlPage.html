@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number">Number:</label>
+    <input type="text" name="number" id="number"/>
+    <input type="button" value="Check" onclick="CheckThirdBit()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+
+    <script>
+        function CheckThirdBit() {
+            var number = document.getElementById("number").value;
+            var mask = 1;
+            var BitType = number & (mask << 3);
+            if (BitType) {
+                jsConsole.writeLine("The third bit of " + number + " is: 1");
+            }
+            else {
+                jsConsole.writeLine("The third bit of " + number + " is: 0");
+            }
+
+        }
+    </script>
+
+</body>
+</html>

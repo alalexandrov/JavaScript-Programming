@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="box">
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+        <div><strong>DIV</strong></div>
+    </div>
+
+    <script>
+        var timer = setInterval(function () { Action() }, 1000);
+        function Action() {
+            var box = document.getElementById("box");
+            box.style.width = "700px";
+            box.style.height = "700px";
+            box.style.backgroundColor = "#aea"
+            box.style.textAlign = "center";
+            var child = box.firstElementChild;
+            while (child != null) {
+                MakeDivShiny(child);
+                child = child.nextElementSibling;
+            }
+        }
+
+        function MakeDivShiny(element) {
+            //Random size
+            element.style.width = generateRandSize(20, 100) + "px";
+            element.style.height = generateRandSize(20, 100) + "px";
+            //Random background color
+            element.style.backgroundColor = generateRandColor();
+            //Random font color
+            element.style.color = generateRandColor();
+            //Random position on screan
+            element.style.position = "absolute";
+            element.style.top = generateRandSize(20, 500) + "px";
+            element.style.left = generateRandSize(20, 500) + "px";
+            //Border
+            element.style.borderStyle = "solid";
+            //Random border radius
+            element.style.borderRadius = generateRandSize(0, 50) + "%";
+            //Random border color 
+            element.style.borderColor = generateRandColor();
+            // Random border width
+            element.style.borderWidth = generateRandSize(1, 20) + "px";
+        }
+
+        function generateRandSize(start, end) {
+            var size = Math.floor((Math.random() * (end - start + 1)) + start);
+            return size;
+        }
+
+        function generateRandColor() {
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+            var Color = "rgb(" + red + "," + green + "," + blue + ")";
+            return Color;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿body, ul, li, a, img {
+    margin: 0px;
+    padding: 0px;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+
+/*site bar styles*/
+#favBar {
+    padding-top: 10px;
+    height: 40px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+    #favBar > li {
+        line-height: 27px;
+        display: inline-block;
+        margin-left: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+        #favBar > li > a {
+            padding: 10px;          
+            text-decoration: none;
+            color: black;
+        }
+
+        #favBar > li:hover {
+            background-color: skyblue;
+            color: red;
+        }
+
+            #favBar > li:hover > a {
+                text-decoration: underline;
+                color: red;
+            }
+
+        /*folder element*/
+        #favBar > li.folder {
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 5px;
+            padding-bottom: 18px;
+            position: relative;
+            
+        }
+
+.folder > ul {
+    margin-top: 15px;
+    padding: 15px;
+    width: 250px;
+    background-color: skyblue;
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+}
+
+    .folder > ul > li {
+        margin-top: 5px;
+        list-style-type: none;
+        color: black;
+    }
+
+        .folder > ul > li > a {
+            color: black;
+            text-decoration: none;
+        }
+
+            .folder > ul > li > a:hover {
+                color: red;
+                text-decoration: underline;
+            }
+
+.folder > img {
+    float: left;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+.folder:hover > ul {
+    display: block;
+}
+
+
+.url {
+}

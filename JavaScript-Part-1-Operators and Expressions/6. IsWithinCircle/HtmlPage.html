@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="xCord">X</label>
+    <input type="text" id="xCord"/>
+    <br />
+    <label for="yCord">Y</label>
+    <input type="text" id="yCord" />
+    <input type="button" value="Check" onclick="CheckPoint()" />
+
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+
+    <script>
+        function CheckPoint() {
+            var xCord = document.getElementById("xCord").value;
+            var yCord = document.getElementById("yCord").value;
+            if (xCord * xCord + yCord * yCord <= 25) {
+                jsConsole.writeLine("The point is within a circle K(O,5) !");
+            }
+            else {
+                jsConsole.writeLine("The point is NOT within a circle K(O,5) !");
+            }
+        }
+    </script>
+
+</body>
+</html>

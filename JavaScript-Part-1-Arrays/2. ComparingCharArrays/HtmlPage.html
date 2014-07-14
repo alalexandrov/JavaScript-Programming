@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        var arr1 = "abcdfgfdarpr";
+        var arr2 = "bvgbfytlkaab";
+        for (var i = 0; i < arr1.length; i++) {
+            if (arr1[i] > arr2[i]) {
+                jsConsole.writeLine(arr1[i] + " > " + arr2[i]);
+            }
+            else if (arr1[i] < arr2[i]) {
+                jsConsole.writeLine(arr1[i] + " < " + arr2[i]);
+            }
+            else {
+                jsConsole.writeLine(arr1[i] + " = " + arr2[i]);
+            }
+        }
+    </script>
+</body>
+</html>

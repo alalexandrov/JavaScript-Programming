@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <button id="button">Click me</button>
+    <ul id="Container">
+
+    </ul>
+    <ul id="Container2">
+
+    </ul>
+    <script>
+        var domModule = function () {
+            var elementsBuffer = {};
+            function appendChild(element, parentSelector) {
+                var parent = document.querySelector(parentSelector);
+                parent.appendChild(element);
+            }
+
+            function removeChild(elementSelector, parentSelector) {
+                var parent = document.querySelector(parentSelector);
+                var child = document.querySelector(elementSelector);
+                parent.removeChild(child);
+            }
+
+            function addHandler(elementSelector, eventType, handler) {
+                var element = document.querySelector(elementSelector);
+                element.addEventListener(eventType, handler);
+            }
+
+            function getElementsFrom(elementSelector) {
+                var elements = document.querySelectorAll(elementSelector);
+                return elements;
+            }
+
+            function appendToBuffer(element, parentSelector) {
+
+                if (elementsBuffer[parentSelector]) {
+
+                    elementsBuffer[parentSelector].appendChild(element);
+
+                    if (elementsBuffer[parentSelector].childNodes.length == 100) {
+                        var parent = document.querySelector(parentSelector);
+                        parent.appendChild(elementsBuffer[parentSelector]);
+                    }
+                }
+
+                else {
+                    elementsBuffer[parentSelector] = document.createDocumentFragment();
+                    elementsBuffer[parentSelector].appendChild(element);
+                }
+            }
+
+            return {
+                appendChild: appendChild,
+                removeChild: removeChild,
+                addHandler: addHandler,
+                getElementsFrom: getElementsFrom,
+                appendToBuffer: appendToBuffer
+            }
+        }();
+
+        var el = document.createElement("li");
+        domModule.appendChild(el,"#Container")
+        
+    </script>
+</body>
+</html>

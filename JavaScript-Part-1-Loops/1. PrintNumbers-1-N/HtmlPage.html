@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number">N:</label>
+    <input type="text" id="number"/>
+    <input type="button" value="PrintNumbers" onclick="PrintNumbers()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function PrintNumbers() {
+            for (var i = 1; i <= parseInt(document.getElementById("number").value) ; i++) {
+                jsConsole.writeLine(i);
+            }
+        }
+    </script>
+</body>
+</html>

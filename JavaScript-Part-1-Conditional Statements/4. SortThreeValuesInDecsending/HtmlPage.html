@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label>A:</label>
+    <input type="text" id="A"/>
+    <br />
+    <label>B:</label>
+    <input type="text" id="B"/>
+    <br />
+    <label>C:</label>
+    <input type="text" id="C"/>
+    <input type="button" onclick="SortValues1()" value="Sort" />
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+
+    <script>
+        function SortValues() {
+            var A = parseInt(document.getElementById("A").value);
+            var B = parseInt(document.getElementById("B").value);
+            var C = parseInt(document.getElementById("C").value);
+
+            if (A < B) {
+                var Temp = A;
+                A = B;
+                B = Temp;
+            }
+            if (B < C) {
+                var Temp = B;
+                B = C;
+                C = Temp;
+            }
+            if (A < B) {
+                var Temp = A;
+                A = B;
+                B = Temp;
+            }
+            jsConsole.writeLine(A + "," + B + "," + C);        
+        }
+
+        function SortValues1() {
+            var A = parseInt(document.getElementById("A").value);
+            var B = parseInt(document.getElementById("B").value);
+            var C = parseInt(document.getElementById("C").value);
+
+            if (A > B) {
+                if (B > C) {
+                    jsConsole.writeLine(A + "," + B + "," + C);
+                }
+                else {
+                    if (A > C) {
+                        jsConsole.writeLine(A + "," + C + "," + B);
+                    }
+                    else {
+                        jsConsole.writeLine(C + "," + A + "," + B);
+                    }
+                }
+            }
+            else {
+                if (A > C) {
+                    jsConsole.writeLine(B + "," + A + "," + C);
+                }
+                else {
+                    if (B > C) {
+                        jsConsole.writeLine(B + "," + C + "," + A);
+                    }
+                    else {
+                        jsConsole.writeLine(C + "," + B + "," + A);
+                    }
+                }
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number">Number:</label>
+    <input type="text" id="number"/>
+    <input type="button" onclick="CheckDivide()" value="Check"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function CheckDivide() {
+            var number = document.getElementById("number").value;
+            var answer = (number % 5 == 0) && (number % 7 == 0);
+            jsConsole.writeLine("The number is divide by 7 and 5 without remainder? :" + answer);
+        }
+    </script>
+</body>
+</html>

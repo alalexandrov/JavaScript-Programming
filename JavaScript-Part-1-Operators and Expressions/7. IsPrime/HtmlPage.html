@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number">Number:</label>
+    <input type="text" name="number" id="number"/>
+    <input type="button" value="Check" onclick="IsPrime()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function IsPrime() {
+            var number = document.getElementById("number").value;
+            var isPrime = true;
+            var MaxDivider = Math.sqrt(number);
+            var StartDivider = 2;
+            while(isPrime && StartDivider <= MaxDivider ) {
+                if (number % StartDivider == 0) {
+                    isPrime = false;
+                    break;
+                }
+                StartDivider++;
+            }
+            jsConsole.writeLine("The number: " + number + " is prime ?:" + isPrime);
+        }
+    </script>
+</body>
+</html>

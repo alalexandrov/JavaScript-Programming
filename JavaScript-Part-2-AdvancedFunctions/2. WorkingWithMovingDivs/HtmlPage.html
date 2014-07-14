@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #movingInRectContainer {
+            float: left;
+            width: 800px;
+            height: 800px;
+            background-color: black;
+            border: 3px solid red;
+            position: relative;
+            
+        }
+
+        #movingInCircularContainer {
+            width: 800px;
+            height: 800px;
+            background-color: black;
+            border: 3px solid red;
+            position: relative;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="movingInRectContainer"></div>
+    <div id="movingInCircularContainer"></div>
+    <input type="button" value="AddShapeInRect" onclick="movingShapes.Add('rect')" />
+    <input type="button" value="AddShapeInCirc" onclick="movingShapes.Add('circ')" />
+    <script>
+
+        var movingShapes = (function () {
+
+            var DivInRectContainer = document.getElementById("movingInRectContainer");
+            var DivInCircContainer = document.getElementById("movingInCircularContainer");
+            var circAngle = 0;
+            var DivsInRectangular = [];
+            var DivsInCircular = [];       
+
+            function Add(elementType) {
+                switch (elementType) {
+                    case "rect":
+                        var divInRect = GenerateShinyDiv();
+                        DivsInRectangular.push(divInRect);
+                        AppendElementTo(DivInRectContainer, divInRect); break;
+                    case "circ":
+                        var divInCirc = GenerateShinyDiv();
+                        DivsInCircular.push(divInCirc);
+                        AppendElementTo(DivInCircContainer, divInCirc); break;
+                }
+            }
+
+            function moveInRect(elements, xCordMin, yCordMin, xCordMax, yCordMax, step) {
+                for (var i = 0; i < elements.length; i++) {
+
+                    var x = elements[i].offsetLeft;
+                    var y = elements[i].offsetTop;
+
+                    if (x < xCordMax && y == yCordMin) {
+                        setPosition(elements[i], x + step, y);
+                    }
+                    else if (x == xCordMax && y < yCordMax) {
+
+                        setPosition(elements[i], x, y + step);
+                    }
+                    else if (y == yCordMax && x > xCordMin) {
+
+                        setPosition(elements[i], x - step, y);
+                    }
+                    else {
+                        setPosition(elements[i], x, y - step);
+                    }
+
+                }
+            }
+
+            function moveInCircular(elements) {
+                var radius = 200;
+                var step = (2 * Math.PI) / elements.length;
+                for (var i = 0; i < elements.length; i++) {
+                    var x = Math.round(300 + radius * Math.cos(circAngle));
+                    var y = Math.round(300 + radius * Math.sin(circAngle));
+                    setPosition(elements[i], x, y);
+                    circAngle += step;
+                }
+                circAngle += 0.01;
+            }
+
+            function GenerateShinyDiv() {
+                var div = document.createElement("div");
+                div.style.width = 50 + "px";
+                div.style.height = 50 + "px";
+                div.style.border = "5px solid " + RandomColor();
+                div.style.borderRadius = "50%";
+                div.style.color = RandomColor();
+                div.style.backgroundColor = RandomColor();
+                div.style.position = "absolute";
+                div.style.top = 100 + "px";
+                div.style.left = 100 + "px";
+                return div;
+            }
+
+            function setPosition(element, xCord, yCord) {
+                element.style.top = yCord + "px";
+                element.style.left = xCord + "px";
+            }
+
+            function RandomColor() {
+                var red = Math.floor(Math.random() * 256);
+                var green = Math.floor(Math.random() * 256);
+                var blue = Math.floor(Math.random() * 256);
+                var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+                return color;
+            }
+
+            function RandomNumber(minNumber, maxNumber) {
+                var number = Math.floor((Math.random() * (maxNumber - minNumber + 1)) + minNumber);
+                return number;
+            }
+
+            function AppendElementTo(container, element) {
+                container.appendChild(element);
+            }
+
+            setInterval(function () { moveInCircular(DivsInCircular) }, 1)
+            setInterval(function () { moveInRect(DivsInRectangular, 100, 100, 500, 500, 1) }, 1);
+
+            return {
+                Add: Add
+            }
+        })();
+
+    </script>
+</body>
+</html>

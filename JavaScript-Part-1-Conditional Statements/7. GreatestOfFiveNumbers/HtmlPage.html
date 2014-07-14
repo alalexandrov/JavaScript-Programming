@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number1">Number 1:</label>
+    <input type="text" id="number1" />
+    <br />
+    <label for="number2">Number 2:</label>
+    <input type="text" id="number2" />
+    <br />
+    <label for="number3">Number 3:</label>
+    <input type="text" id="number3" />
+    <br />
+    <label for="number4">Number 4:</label>
+    <input type="text" id="number4" />
+    <br />
+    <label for="number5">Number 5:</label>
+    <input type="text" id="number5" />
+    <input type="button" value="FindMax" onclick="FindMax()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function FindMax() {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            var number3 = parseFloat(document.getElementById("number3").value);
+            var number4 = parseFloat(document.getElementById("number4").value);
+            var number5 = parseFloat(document.getElementById("number5").value);
+            var numbers = [number1, number2, number3, number4, number5];
+            var MaxValue = number1;
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] > MaxValue) {
+                    MaxValue = numbers[i];
+                }
+            }
+            jsConsole.writeLine("The max number is: " + MaxValue);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        var arr = [3, 2, 3, 4, 2, 2, 4];
+        var CurrentIndex = 0;
+        var BestLenElementIndex = 0;
+        var len = 1;
+        var BestLen = 0;
+        for (var i = 0; i < arr.length - 1; i++) {
+            if (arr[i] < arr[i + 1]) {
+                CurrentIndex = i + 1;
+                len++;
+                if (len > BestLen) {
+                    BestLen = len;
+                    BestLenElementIndex = CurrentIndex;
+                }
+            }
+            else {
+                len = 1;
+            }
+        }
+        
+        var BestLenArr = new Array();
+        for (var i = BestLenElementIndex - BestLen + 1; i <= BestLenElementIndex; i++) {
+            BestLenArr.push(arr[i]);
+        }
+
+        jsConsole.write("[ ");
+        jsConsole.write(BestLenArr);
+        jsConsole.write(" ]")
+
+    </script>
+</body>
+</html>

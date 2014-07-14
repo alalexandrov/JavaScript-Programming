@@ -1,0 +1,6 @@
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\1. SimpleContentSlider\bin\_1.SimpleContentSlider.dll.config
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\1. SimpleContentSlider\bin\_1.SimpleContentSlider.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\1. SimpleContentSlider\bin\_1.SimpleContentSlider.pdb
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\1. SimpleContentSlider\obj\Debug\_1.SimpleContentSlider.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\1. SimpleContentSlider\obj\Debug\_1.SimpleContentSlider.pdb
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\1. SimpleContentSlider\obj\Debug\1. SimpleContentSlider.csprojResolveAssemblyReference.cache

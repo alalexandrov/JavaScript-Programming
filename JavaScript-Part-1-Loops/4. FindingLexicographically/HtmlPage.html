@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    
+    <script>
+        var Max = "a";
+        var Min = "z";
+        for (var prop in document) {
+            if (Max < prop) {
+                Max = prop;
+            }
+            if (Min > prop) {
+                Min = prop;
+            }
+        }
+
+        jsConsole.writeLine("The lexicographically largest property of 'document' is: " + Max);
+        jsConsole.writeLine("The lexicographically smallest property of 'document' is: " + Min);
+        jsConsole.writeLine();
+
+        var Max1 = "a";
+        var Min1 = "z";
+        for (var prop in window) {
+            if (Max1 < prop) {
+                Max1 = prop;
+            }
+            if (Min1 > prop) {
+                Min1 = prop;
+            }
+        }
+
+        jsConsole.writeLine("The lexicographically largest property of 'window' is: " + Max1);
+        jsConsole.writeLine("The lexicographically largest property of 'window' is: " + Min1);
+        jsConsole.writeLine();
+
+        var Max2 = "a";
+        var Min2 = "z";
+        for (var prop in navigator) {           
+            if (Max2 < prop) {
+                Max2 = prop;
+            }
+            if (Min2 > prop) {
+                Min2 = prop;
+            }
+        }
+
+        jsConsole.writeLine("The lexicographically largest property of 'navigator' is: " + Max2);
+        jsConsole.writeLine("The lexicographically smallest property of 'navigator' is: " + Min2);
+    </script>
+</body>
+</html>

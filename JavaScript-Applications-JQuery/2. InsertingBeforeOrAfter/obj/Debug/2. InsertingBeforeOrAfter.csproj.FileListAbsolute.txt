@@ -1,0 +1,6 @@
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\2. InsertingBeforeOrAfter\bin\_2.InsertingBeforeOrAfter.dll.config
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\2. InsertingBeforeOrAfter\bin\_2.InsertingBeforeOrAfter.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\2. InsertingBeforeOrAfter\bin\_2.InsertingBeforeOrAfter.pdb
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\2. InsertingBeforeOrAfter\obj\Debug\_2.InsertingBeforeOrAfter.dll
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\2. InsertingBeforeOrAfter\obj\Debug\_2.InsertingBeforeOrAfter.pdb
+C:\Users\Alexander\documents\visual studio 2013\Projects\JavaScript-Applications-JQuery\2. InsertingBeforeOrAfter\obj\Debug\2. InsertingBeforeOrAfter.csprojResolveAssemblyReference.cache

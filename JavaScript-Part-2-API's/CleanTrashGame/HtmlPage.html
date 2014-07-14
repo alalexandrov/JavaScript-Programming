@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Clean Trash Game</title>
+    <link href="Styles.css" rel="stylesheet" />
+</head>
+<body onload="loadGame()">
+
+    <img id="container" src="Images/1401917926_trash_empty.png" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="denyDrop()" />
+    <div id="scoreBoardContainer">
+        <h1>TOP SCORES</h1>
+        <ol id="scoreBoard">
+            <li>----------</li>
+            <li>----------</li>
+            <li>----------</li>
+            <li>----------</li>
+            <li>----------</li>
+        </ol>
+        <input id="startGameBtn" type="button" value="CLEAN JUNK" onclick="startGame()" />
+    </div>
+
+
+    <div id="getPlayerNameForm">
+        <label>Your name: </label>
+        <input id="playerName" type="text" />
+        <input id="submitBtn" type="button" value="OK" onclick="submitPlayer()" />
+    </div>
+
+    <script src="TopScoreSystem.js"></script>
+    <script src="Common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        var arr = [4, 1, 1, 4, 4, 4, 2, 3, 4, 4, 1, 2, 4, 4, 9, 3];
+        var currentElement;
+        var len = 1;
+        var bestElement;
+        var bestLen = 0;
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1 ; j < arr.length; j++) {
+                if (arr[i] == arr[j] && arr[i] != Number.MIN_VALUE) {
+                    currentElement = arr[i];
+                    arr[j] = Number.MIN_VALUE;
+                    len++;
+                    if (len > bestLen) {
+                        bestLen = len;
+                        bestElement = currentElement;
+                        
+                    }
+                }            
+            }
+
+            len = 1;
+        }
+       
+        jsConsole.writeLine(bestElement + " (" + bestLen + " times" + ")");
+    </script>
+</body>
+</html>

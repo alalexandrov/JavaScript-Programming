@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var specialConsole = (function () {
+
+            function writeLine() {
+                var output = stringFormat.apply(this, arguments);
+                console.log(output.toString());
+            }
+
+            function writeError() {
+                var output = stringFormat.apply(this, arguments);
+                console.error(output.toString());
+            }
+
+            function writeWarning() {
+                var output = stringFormat.apply(this, arguments);
+                console.warn(output.toString());
+            }
+
+            function stringFormat() {
+                var output = arguments[0] || "\n";
+                for (var i = 0; i < arguments.length - 1; i++) {
+                    output = output.replace("{" + i + "}", arguments[i + 1]);
+                }
+                return output;
+            }
+
+            return {
+                writeLine: writeLine,
+                writeError: writeError,
+                writeWarning: writeWarning
+            };
+        })();
+
+        specialConsole.writeLine();
+
+        specialConsole.writeLine("{0}", "Bla bla bla writeLine");
+   
+        specialConsole.writeError("{0}", "Bla bla bla error");
+
+        specialConsole.writeWarning("{0}", "bla bla bla Warning");
+
+
+    </script>
+</body>
+</html>

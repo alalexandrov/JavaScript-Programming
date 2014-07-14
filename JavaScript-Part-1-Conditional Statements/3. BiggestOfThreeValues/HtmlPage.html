@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label>A:</label>
+    <input type="text" id="A"/>
+    <br />
+    <label>B:</label>
+    <input type="text" id="B"/>
+    <br />
+    <label>C:</label>
+    <input type="text" id="C"/>
+    <input type="button" onclick="FindMax()" value="FindMax" />
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function FindMax() {
+            var A = parseInt(document.getElementById("A").value);
+            var B = parseInt(document.getElementById("B").value);
+            var C = parseInt(document.getElementById("C").value);
+
+            if (A > B) {
+                if (A > C) {
+                    jsConsole.writeLine("The max number is: " + A);
+                }
+                else {
+                    jsConsole.writeLine("The max number is: " + C);
+                }
+            }
+            else {
+                if (B > C) {
+                    jsConsole.writeLine("The max number is: " + B);
+                }
+                else {
+                    jsConsole.writeLine("The max number is: " + C);
+                }
+            }   
+        }
+    </script>
+</body>
+</html>

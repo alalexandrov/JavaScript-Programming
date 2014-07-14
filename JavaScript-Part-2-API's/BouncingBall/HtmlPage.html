@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        canvas {
+            background-color: black;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="750" height="350">Canvas</canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var ballRadius = 20;
+
+        var sideX = canvas.width - ballRadius;
+        var sideY = canvas.height - ballRadius;
+
+        var ballCordX = generateRandNum(ballRadius, sideX)
+        var ballCordY = generateRandNum(ballRadius, sideY);
+        var ballColor = generateRandColor();
+        
+        var Xstep = 1;
+        var Ystep = 1;
+
+        setInterval(function () { moveBall() }, 10);
+
+        function moveBall() {
+            drawBall(ballCordX, ballCordY, ballRadius, ballColor, ctx);
+            ballCordX += Xstep;
+            ballCordY += Ystep;
+
+            if (ballCordY == sideY) {
+                Ystep *= -1;
+                ballColor = generateRandColor();
+            }
+            if (ballCordX == sideX) {
+                Xstep *= -1;
+                ballColor = generateRandColor();
+            }
+            if (ballCordY == ballRadius) {
+                Ystep *= -1;
+                ballColor = generateRandColor();
+            }
+            if (ballCordX == ballRadius) {
+                Xstep *= -1;
+                ballColor = generateRandColor();
+            }
+
+        }
+
+        function drawBall(xCord, yCord, radius, color, context) {
+            context.fillStyle = color;
+            context.lineWidth = 2;
+            context.beginPath();
+            context.arc(xCord, yCord, radius, 0, 2 * Math.PI, false);            
+            context.fill();
+            context.stroke();
+        }
+
+        function generateRandNum(startNum, endNum) {
+            return Math.floor(Math.random() * (endNum - startNum + 1) + startNum);
+        }
+
+        function generateRandColor() {
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+            return "rgb(" + red + ", " + green + ", " + blue + ")";
+        }
+    </script>
+</body>
+</html>

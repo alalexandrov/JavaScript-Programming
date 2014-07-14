@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="A">A:</label>
+    <input type="text" id="A"/>
+    <br />
+    <label for="B">B:</label>
+    <input type="text" id="B"/>
+    <br />
+    <label for="C">C</label>
+    <input type="text" id="C"/>
+    <input type="button" value="PrintSign" onclick="CheckSignOfProduct()" />
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function CheckSignOfProduct() {
+            var A = parseFloat(document.getElementById("A").value);
+            var B = parseFloat(document.getElementById("B").value);
+            var C = parseFloat(document.getElementById("C").value);
+
+            if ((A < 0 && B > 0 && C > 0) ||
+                (B < 0 && A > 0 && C > 0) ||
+                (C < 0 && A > 0 && B > 0) ||
+                (A < 0 && B < 0 && C < 0)) {
+                jsConsole.writeLine("The sign of product is '-'")
+            }
+            else {
+                jsConsole.writeLine("The sign of product is '+'")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number"></label>
+    <input type="text" id="number"/>
+    <input type="button" value="LastDigit" onclick="ReadNumber()"/>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function ReadNumber() {
+            var Number = parseFloat(document.getElementById("number").value);
+            jsConsole.writeLine(LastDigitExtraction(Number));
+        }
+
+        function LastDigitExtraction(number) {
+            var lastDigit = number % 10;
+            switch (lastDigit) {
+                case 0: return "Zero"; break;
+                case 1: return "One"; break;
+                case 2: return "Two"; break;
+                case 3: return "Three"; break;
+                case 4: return "Four"; break;
+                case 5: return "Five"; break;
+                case 6: return "Six"; break;
+                case 7: return "Seven"; break;
+                case 8: return "Eight"; break;
+                case 9: return "Nine"; break;
+                default: return "Invalid digit !"
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

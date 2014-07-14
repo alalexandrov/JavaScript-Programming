@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="number">Width: </label>
+    <input type="text" id="width"/>
+    </br>
+    <label for="height">Height:</label>
+    <input type="text" id="height"/>
+    <input type="button" value="Calculate" onclick="CalculateReactangleArea()" />
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        function CalculateReactangleArea() {
+            var width = document.getElementById("width").value;
+            var height = document.getElementById("height").value;
+            var area = width * height / 2;
+            jsConsole.writeLine("The rectangle area is: " + area);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        textarea {
+            width: 200px;
+            height: 100px;
+        }
+        input {
+            display: block;
+            margin-top: 30px;
+        }
+        button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="text">content</textarea>
+    
+    <input type="color" value="Enter a font color" id="fColor" />
+
+    <input type="color" value="Enter a background color" id="bColor" />
+
+    <button onclick="changeColors()">Change colors</button>
+
+    <script>    
+        function changeColors() {
+            var fColor = document.getElementById("fColor").value.toString();
+            var bColor = document.getElementById("bColor").value.toString();
+            var textArea = document.getElementById("text");
+            textArea.style.color = fColor;
+            textArea.style.backgroundColor = bColor;
+        }
+    </script>
+</body>
+</html>

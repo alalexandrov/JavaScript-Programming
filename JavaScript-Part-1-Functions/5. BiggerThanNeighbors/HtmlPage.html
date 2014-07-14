@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JsConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../JsConsole/js-console.js"></script>
+    <script>
+        var arr = [1, 2, 3, 2, 4, 1];
+
+        function IsBiggerThanNeighbors(index, array) {
+            if (index == 0 || index == array.length - 1) {
+                return false;
+            }
+            else if(array[index] <= array[index + 1] ||
+                    array[index] <= array[index - 1]) {
+                return false;
+            }
+
+            return true;
+        }
+        jsConsole.writeLine(IsBiggerThanNeighbors(2, arr));
+    </script>
+</body>
+</html>

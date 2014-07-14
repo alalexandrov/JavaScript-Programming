@@ -1,0 +1,32 @@
+﻿#carouselContainer {
+            width: 1200px;
+            height: 720px;
+            border: 1px solid black;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+        #currentImage {
+            width: 720px;
+            height: 480px;
+            display: block;
+            margin: 80px auto;
+        }
+
+        #imagesContainer{
+            margin: 0 auto;
+            text-align:center;
+        }
+        input {
+            width: 200px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #prevImgBtn {
+
+        }
+
+        #nextImgBtn {
+            margin-left: 50px;
+        }
