@@ -1,2 +1,2 @@
-My JavaScript exercises and projects from Teleric Academy
+My JavaScript homeworks and projects from Telerik Academy
 ======================
